@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "ofMain.h"
 #include "setup.h"
-#include "threadedObject.h"
+#include "SjQPlayer.h"
 #include"Osc.h"
 class Osc;
 
@@ -33,11 +33,9 @@ public:
         
     }
 
-    //SystemParams
-    bool local;
+    //App
+    SjQPlayer app;
     //Sound
-    player_type_e player_type;
-    note_type_e note_type;
     ofSoundPlayer  beats;
     ofSoundPlayer  synth;
     ofSoundPlayer  vocals;

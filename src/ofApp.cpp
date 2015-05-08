@@ -7,14 +7,9 @@ void ofApp::setup(){
     
     //SetupNode
     ofSystem("open ../../../data/launch");
-//        ofSystem("sh ../../../data/open_osc-hub.sh");
     
     //SetDefault
-    player_type = PF;
-    note_type = POINT;
-    
-    //System
-    local = false;
+    app.setup();
     
     //Setup OSC
     osc = new Osc(7401,this);
@@ -57,15 +52,15 @@ void ofApp::draw(){
 void ofApp::keyPressed(int key){
     
 //    //SET Player
-    if(key=='p')player_type = PF;
-    if(key=='t')player_type = TB;
-    if(key=='g')player_type = GT;
-    if(key=='b')player_type = BA;
-    if(key=='d')player_type = DR;
+    if(key=='p')app.player_type = PF;
+    if(key=='t')app.player_type = TB;
+    if(key=='g')app.player_type = GT;
+    if(key=='b')app.player_type = BA;
+    if(key=='d')app.player_type = DR;
     
     //SoundPlayback
-    if(local){
-        if(player_type==PF){
+    if(app.local){
+        if(app.player_type==PF){
             if(key=='1')synth.play();
         }else{
             if(key=='1')vocals.play();
@@ -77,8 +72,8 @@ void ofApp::keyPressed(int key){
         
         ofxOscMessage m;
         m.setAddress("/test2");
-        m.addIntArg(player_type);
-        m.addIntArg(note_type);
+        m.addIntArg(app.player_type);
+        m.addIntArg(app.note_type);
         sender.sendMessage(m);
         
     }
