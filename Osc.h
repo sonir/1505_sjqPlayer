@@ -16,31 +16,21 @@
 #include "setup.h"
 class ofApp;
 
-
-class NoteEvent{
-    
-    public:
-        player_type_e player_type = PF;
-        note_type_e note_type = POINT;
-    
-};
-
 class Osc : public slOscManager{
 
     public:
 
         Osc(int port, ofApp *app_adr):slOscManager(port){
         
-            app = app_adr;
-            n.player_type = PF;
-            n.note_type = POINT;
+            ofapp = app_adr;
+            trg.inst = PF;
+            trg.note = POINT;
             
         }
 
-        ofApp *app;
-        NoteEvent n;
+        ofApp *ofapp;
+        note_event_t trg;
         void fireMessage(ofxOscMessage *m);
-//        ofEvent<NoteEvent> triggerEvent;
 
     
 };

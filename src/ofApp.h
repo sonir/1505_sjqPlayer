@@ -26,7 +26,10 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
 
-    void noteTrigger(player_type_e player_type);
+    void noteTrigger(note_event_t trg);
+    void reload(player_type_e player);
+    
+    //Deconstructor
     ~ofApp(){
         
         system("killall Terminal");
@@ -36,9 +39,12 @@ public:
     //App
     SjQPlayer app;
     //Sound
-    ofSoundPlayer  beats;
-    ofSoundPlayer  synth;
-    ofSoundPlayer  vocals;
+    ofSoundPlayer  pf;
+    ofSoundPlayer  tb;
+    ofSoundPlayer  gt;
+    ofSoundPlayer  ba;
+    ofSoundPlayer  dr;
+    
     //OSC
     Osc *osc;
     ofxOscSender sender;

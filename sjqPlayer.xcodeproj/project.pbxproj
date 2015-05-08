@@ -43,6 +43,7 @@
 		F2193F381AFB935C005A3B5B /* slOscManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2193F1F1AFB935B005A3B5B /* slOscManager.cpp */; };
 		F2193F3B1AFB9396005A3B5B /* Osc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2193F391AFB9396005A3B5B /* Osc.cpp */; };
 		F27D61851AFC433700FFB28A /* SjQPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F27D61831AFC433700FFB28A /* SjQPlayer.cpp */; };
+		F2C2F21C1AFCD1EF00AD3CC2 /* slInterpolation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2C2F2031AFCD1EF00AD3CC2 /* slInterpolation.cpp */; };
 		F2C7A7C51AFC54CF0019B4E3 /* slAppManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2C7A7AB1AFC54CF0019B4E3 /* slAppManager.cpp */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +140,8 @@
 		F2193F3D1AFBB0AD005A3B5B /* setup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = setup.h; sourceTree = "<group>"; };
 		F27D61831AFC433700FFB28A /* SjQPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SjQPlayer.cpp; sourceTree = "<group>"; };
 		F27D61841AFC433700FFB28A /* SjQPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SjQPlayer.h; sourceTree = "<group>"; };
+		F2C2F2031AFCD1EF00AD3CC2 /* slInterpolation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = slInterpolation.cpp; sourceTree = "<group>"; };
+		F2C2F2041AFCD1EF00AD3CC2 /* slInterpolation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slInterpolation.h; sourceTree = "<group>"; };
 		F2C7A7AB1AFC54CF0019B4E3 /* slAppManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = slAppManager.cpp; sourceTree = "<group>"; };
 		F2C7A7AC1AFC54CF0019B4E3 /* slAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slAppManager.h; sourceTree = "<group>"; };
 		F2C7A7AD1AFC54CF0019B4E3 /* stino.settings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stino.settings; sourceTree = "<group>"; };
@@ -229,6 +232,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				F2C2F1C41AFCD1EF00AD3CC2 /* slInterpolation */,
 				F2C7A76C1AFC54CF0019B4E3 /* slAppManager */,
 				F2193EDF1AFB935B005A3B5B /* slOscManager */,
 				E6053AB7FEC63D5F83825B88 /* ofxOsc */,
@@ -326,9 +330,9 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F2193F3D1AFBB0AD005A3B5B /* setup.h */,
 				F2193F391AFB9396005A3B5B /* Osc.cpp */,
 				F2193F3A1AFB9396005A3B5B /* Osc.h */,
-				F2193F3D1AFBB0AD005A3B5B /* setup.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				F27D61831AFC433700FFB28A /* SjQPlayer.cpp */,
 				F27D61841AFC433700FFB28A /* SjQPlayer.h */,
@@ -370,6 +374,24 @@
 			children = (
 				F2193F1F1AFB935B005A3B5B /* slOscManager.cpp */,
 				F2193F201AFB935B005A3B5B /* slOscManager.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F2C2F1C41AFCD1EF00AD3CC2 /* slInterpolation */ = {
+			isa = PBXGroup;
+			children = (
+				F2C2F2021AFCD1EF00AD3CC2 /* src */,
+			);
+			name = slInterpolation;
+			path = ../../../addons/slInterpolation;
+			sourceTree = "<group>";
+		};
+		F2C2F2021AFCD1EF00AD3CC2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F2C2F2031AFCD1EF00AD3CC2 /* slInterpolation.cpp */,
+				F2C2F2041AFCD1EF00AD3CC2 /* slInterpolation.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -502,6 +524,7 @@
 				F2C7A7C51AFC54CF0019B4E3 /* slAppManager.cpp in Sources */,
 				4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */,
 				640279EE111671BD026CB013 /* ofxOscReceiver.cpp in Sources */,
+				F2C2F21C1AFCD1EF00AD3CC2 /* slInterpolation.cpp in Sources */,
 				8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */,
 				F27D61851AFC433700FFB28A /* SjQPlayer.cpp in Sources */,
 				ADE367465D2A8EBAD4C7A8D9 /* IpEndpointName.cpp in Sources */,
@@ -706,6 +729,13 @@
 					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slAppManager/libs/necessaryLib/lib/linux64,
 					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slAppManager/libs/necessaryLib/lib/osx,
 					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slAppManager/libs/necessaryLib/lib/win_cb,
+					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/android/armeabi,
+					"/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/android/armeabi-v7a",
+					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/ios,
+					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/linux,
+					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/linux64,
+					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/osx,
+					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/win_cb,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				WRAPPER_EXTENSION = app;
@@ -805,6 +835,13 @@
 					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slAppManager/libs/necessaryLib/lib/linux64,
 					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slAppManager/libs/necessaryLib/lib/osx,
 					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slAppManager/libs/necessaryLib/lib/win_cb,
+					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/android/armeabi,
+					"/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/android/armeabi-v7a",
+					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/ios,
+					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/linux,
+					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/linux64,
+					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/osx,
+					/Users/sonir/Documents/boxes/dev_box/of_v0.8.4_osx_release/addons/slInterpolation/libs/necessaryLib/lib/win_cb,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

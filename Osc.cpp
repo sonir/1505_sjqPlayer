@@ -16,9 +16,22 @@ void Osc::fireMessage(ofxOscMessage *m){
         ofNotifyEvent(test1, fnum);
         
     }
-    else if(m->getAddress() == "/test2"){
+    else if(m->getAddress() == "/sjq/mobile/catchball"){
         
-        app->noteTrigger(PF);
+        trg.inst = (player_type_e)m->getArgAsInt32(0);
+        trg.note = (note_type_e)m->getArgAsInt32(1);
+        ofapp->noteTrigger(trg);
+        
+    }else if(m->getAddress() == "/sjq/mobile/glitch"){
+        
+        trg.inst = (player_type_e)m->getArgAsInt32(0);
+        trg.note = (note_type_e)m->getArgAsInt32(1);
+        ofapp->noteTrigger(trg);
+        
+    }else if(m->getAddress() == "/sjq/performer/play"){
+        
+        player_type_e performer = (player_type_e)m->getArgAsInt32(0);
+        ofapp->reload(performer);
         
     }
 

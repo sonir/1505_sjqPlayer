@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3BF0311D-7372-4C7E-94F7-9A4BD7869CB6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>sjqPlayer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A7FBB00C99A5BDBF64176D56410340CD45554AB7</key>
+		<string>https://github.com/sonir/1505_sjqPlayer.git</string>
+		<key>AA005C2C69B0D20EC1E9D7E90A120C805800A3B5</key>
+		<string>https://github.com/sonir/slOscManager.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>sjqPlayer.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A7FBB00C99A5BDBF64176D56410340CD45554AB7</key>
+		<string>../..</string>
+		<key>AA005C2C69B0D20EC1E9D7E90A120C805800A3B5</key>
+		<string>../../../addons/slOscManager</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sonir/1505_sjqPlayer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A7FBB00C99A5BDBF64176D56410340CD45554AB7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A7FBB00C99A5BDBF64176D56410340CD45554AB7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sjqPlayer</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AA005C2C69B0D20EC1E9D7E90A120C805800A3B5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>slOscManager</string>
+		</dict>
+	</array>
+</dict>
+</plist>
