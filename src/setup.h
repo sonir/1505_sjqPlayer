@@ -42,7 +42,7 @@
 
 
 enum player_type_e {NONE, PF, TB, GT, BA, DR};
-enum note_type_e {POINT, HI_NOTE, LOW_NOTE, KICK, HAT, SNARE};
+enum note_type_e {POINT, HIGH_NOTE, LOW_NOTE, KICK, HAT, SNARE, ALL};
 enum mode_e {CATCH_BALL, GLITCH};
 
 typedef struct note_event_t{

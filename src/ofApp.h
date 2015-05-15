@@ -5,6 +5,7 @@
 #include "ofMain.h"
 #include "setup.h"
 #include "SjQPlayer.h"
+#include "Sound.h"
 #include"Osc.h"
 class Osc;
 
@@ -39,11 +40,11 @@ public:
     //App
     SjQPlayer app;
     //Sound
-    ofSoundPlayer  pf;
-    ofSoundPlayer  tb;
-    ofSoundPlayer  gt;
-    ofSoundPlayer  ba;
-    ofSoundPlayer  dr;
+    Sound  *pf;
+    Sound  *tb;
+    Sound  *gt;
+    Sound  *ba;
+    Sound  *dr;
     
     //OSC
     Osc *osc;

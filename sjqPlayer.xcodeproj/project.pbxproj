@@ -40,8 +40,9 @@
 		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
+		F20373991B0643480076D693 /* Osc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F20373971B0643480076D693 /* Osc.cpp */; };
 		F2193F381AFB935C005A3B5B /* slOscManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2193F1F1AFB935B005A3B5B /* slOscManager.cpp */; };
-		F2193F3B1AFB9396005A3B5B /* Osc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2193F391AFB9396005A3B5B /* Osc.cpp */; };
+		F248E8EE1AFDC2AF00C9BDDE /* Sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F248E8EC1AFDC2AF00C9BDDE /* Sound.cpp */; };
 		F27D61851AFC433700FFB28A /* SjQPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F27D61831AFC433700FFB28A /* SjQPlayer.cpp */; };
 		F2C2F21C1AFCD1EF00AD3CC2 /* slInterpolation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2C2F2031AFCD1EF00AD3CC2 /* slInterpolation.cpp */; };
 		F2C7A7C51AFC54CF0019B4E3 /* slAppManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2C7A7AB1AFC54CF0019B4E3 /* slAppManager.cpp */; };
@@ -133,11 +134,13 @@
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		F20373971B0643480076D693 /* Osc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Osc.cpp; sourceTree = "<group>"; };
+		F20373981B0643480076D693 /* Osc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Osc.h; sourceTree = "<group>"; };
 		F2193F1F1AFB935B005A3B5B /* slOscManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = slOscManager.cpp; sourceTree = "<group>"; };
 		F2193F201AFB935B005A3B5B /* slOscManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slOscManager.h; sourceTree = "<group>"; };
-		F2193F391AFB9396005A3B5B /* Osc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Osc.cpp; path = ../Osc.cpp; sourceTree = "<group>"; };
-		F2193F3A1AFB9396005A3B5B /* Osc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Osc.h; path = ../Osc.h; sourceTree = "<group>"; };
 		F2193F3D1AFBB0AD005A3B5B /* setup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = setup.h; sourceTree = "<group>"; };
+		F248E8EC1AFDC2AF00C9BDDE /* Sound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sound.cpp; sourceTree = "<group>"; };
+		F248E8ED1AFDC2AF00C9BDDE /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
 		F27D61831AFC433700FFB28A /* SjQPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SjQPlayer.cpp; sourceTree = "<group>"; };
 		F27D61841AFC433700FFB28A /* SjQPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SjQPlayer.h; sourceTree = "<group>"; };
 		F2C2F2031AFCD1EF00AD3CC2 /* slInterpolation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = slInterpolation.cpp; sourceTree = "<group>"; };
@@ -330,14 +333,16 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F20373971B0643480076D693 /* Osc.cpp */,
+				F20373981B0643480076D693 /* Osc.h */,
 				F2193F3D1AFBB0AD005A3B5B /* setup.h */,
-				F2193F391AFB9396005A3B5B /* Osc.cpp */,
-				F2193F3A1AFB9396005A3B5B /* Osc.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				F27D61831AFC433700FFB28A /* SjQPlayer.cpp */,
 				F27D61841AFC433700FFB28A /* SjQPlayer.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				F248E8EC1AFDC2AF00C9BDDE /* Sound.cpp */,
+				F248E8ED1AFDC2AF00C9BDDE /* Sound.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -528,14 +533,15 @@
 				8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */,
 				F27D61851AFC433700FFB28A /* SjQPlayer.cpp in Sources */,
 				ADE367465D2A8EBAD4C7A8D9 /* IpEndpointName.cpp in Sources */,
+				F20373991B0643480076D693 /* Osc.cpp in Sources */,
 				67FE4C7B15C2F0478C8126C2 /* NetworkingUtils.cpp in Sources */,
 				510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */,
 				A29D8C96AE042ECEAA1BD4F3 /* NetworkingUtilsWin.cpp in Sources */,
 				F2193F381AFB935C005A3B5B /* slOscManager.cpp in Sources */,
 				28090DEB5109115003E8F1C5 /* UdpSocketWin.cpp in Sources */,
 				62545D179C94265CA1389D4A /* OscOutboundPacketStream.cpp in Sources */,
+				F248E8EE1AFDC2AF00C9BDDE /* Sound.cpp in Sources */,
 				C4782ECC372420ACE0615B74 /* OscPrintReceivedElements.cpp in Sources */,
-				F2193F3B1AFB9396005A3B5B /* Osc.cpp in Sources */,
 				0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */,
 				879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */,
 			);

@@ -17,26 +17,24 @@ void ofApp::setup(){
     sender.setup("127.0.0.1", 7400);
     
     //Setup Sounds
-    pf.loadSound("sounds/pf0.wav");
-    tb.loadSound("sounds/tb0.wav");
-    gt.loadSound("sounds/gt0.wav");
-    ba.loadSound("sounds/ba0.wav");
-    dr.loadSound("sounds/dr0.wav");
+    pf = new Sound("sounds/pf0.wav", "sounds/pf1.wav", "sounds/pf2.wav");
+    tb = new Sound("sounds/tb0.wav", "sounds/tb1.wav", "sounds/tb2.wav");
+    gt = new Sound("sounds/gt0.wav", "sounds/gt1.wav", "sounds/gt2.wav");
+    ba = new Sound("sounds/ba0.wav", "sounds/ba1.wav", "sounds/ba2.wav");
+    dr = new Sound("sounds/dr0.wav", "sounds/dr1.wav", "sounds/dr2.wav");
 
     
-    pf.setVolume(0.75f);
-    tb.setVolume(0.5f);
-    gt.setVolume(0.75f);
-    ba.setVolume(0.75f);
-    dr.setVolume(0.85f);
-
-    pf.setMultiPlay(true);
-    tb.setMultiPlay(true);
-    gt.setMultiPlay(true);
-    ba.setMultiPlay(true);
-    dr.setMultiPlay(true);
-
-
+    pf->setVolume(ALL, 0.75f);
+    tb->setVolume(ALL, 0.5f);
+    gt->setVolume(ALL, 0.75f);
+    ba->setVolume(ALL, 0.75f);
+    dr->setVolume(ALL, 0.75f);
+    
+    pf->setMultiPlay(ALL, true);
+    tb->setMultiPlay(ALL, true);
+    gt->setMultiPlay(ALL, true);
+    ba->setMultiPlay(ALL, true);
+    dr->setMultiPlay(ALL, true);
 
 }
 
@@ -64,6 +62,8 @@ void ofApp::draw(){
     else s+="OFF";
     s+=" (SPC)";
     ofDrawBitmapString(s, MERGINE_LEFT,MERGINE_TOP+LINE_HEIGHT);
+    ofDrawBitmapString("TRIGGER: (UP=CHORD, LEFT=LOW, RIGHT=HIGH)", MERGINE_LEFT,MERGINE_TOP+LINE_HEIGHT*3);
+    
     
     app.drawCircles();
     
@@ -98,13 +98,11 @@ void ofApp::keyPressed(int key){
     }
     
     //SoundPlayback
-    if(app.local){
         if(app.player_type==PF){
-            if(key=='1')pf.play();
+            if(key=='1')pf->play(POINT);
         }else{
-            if(key=='1')gt.play();
+            if(key=='1')pf->play(HIGH_NOTE);
         }
-    }
     
     //SendOSC
     if(key=='1'){
@@ -148,11 +146,11 @@ void ofApp::keyPressed(int key){
         ofxOscMessage m;
         m.setAddress(adr);
         m.addIntArg((int)app.player_type);
-        m.addIntArg((int)HI_NOTE);
+        m.addIntArg((int)HIGH_NOTE);
         sender.sendMessage(m);
         
         if(app.local==true){
-            note_event_t t; t.inst=app.player_type; t.note=HI_NOTE;
+            note_event_t t; t.inst=app.player_type; t.note=HIGH_NOTE;
             noteTrigger(t);
         }
 
@@ -227,19 +225,19 @@ void ofApp::noteTrigger(note_event_t trg){
     
     
     if(trg.inst==PF){
-        pf.play();
+        pf->play(trg.note);
         app.circle[PF].init(FILLSIZE_FOR_TRIGGER, 0.0, 10);
     }else if(trg.inst==TB){
-        tb.play();
+        tb->play(trg.note);
         app.circle[TB].init(FILLSIZE_FOR_TRIGGER, 0.0, 10);
     }else if(trg.inst==GT){
-        gt.play();
+        gt->play(trg.note);
         app.circle[GT].init(FILLSIZE_FOR_TRIGGER, 0.0, 10);
     }else if(trg.inst==BA){
-        ba.play();
+        ba->play(trg.note);
         app.circle[BA].init(FILLSIZE_FOR_TRIGGER, 0.0, 10);
     }else if(trg.inst==DR){
-        dr.play();
+        dr->play(trg.note);
         app.circle[DR].init(FILLSIZE_FOR_TRIGGER, 0.0, 10);
     }
     
