@@ -17,7 +17,7 @@ void Osc::fireMessage(ofxOscMessage *m){
         
     }
     else if(m->getAddress() == "/sjq/mobile/catchball"){
-        
+
         trg.inst = (player_type_e)m->getArgAsInt32(0);
         trg.note = (note_type_e)m->getArgAsInt32(1);
         ofapp->noteTrigger(trg);
@@ -33,7 +33,10 @@ void Osc::fireMessage(ofxOscMessage *m){
         player_type_e performer = (player_type_e)m->getArgAsInt32(0);
         ofapp->reload(performer);
         
-    }
+    }else if(m->getAddress() == "/sjq/blink/set"){
 
+        ofapp->bridgeToBlink(*m);
+        
+    }
     
 }

@@ -76,6 +76,7 @@ void Sound::setMultiPlay(note_type_e t, bool flg){
 
 void Sound::play(note_type_e t){
     
+    
     switch(t){
             
         case POINT:

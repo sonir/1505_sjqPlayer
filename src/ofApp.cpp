@@ -15,6 +15,7 @@ void ofApp::setup(){
     //Setup OSC
     osc = new Osc(7401,this);
     sender.setup("127.0.0.1", 7400);
+    blink.setup("localhost", 65137);
     
     //Setup Sounds
     pf = new Sound("sounds/pf0.wav", "sounds/pf1.wav", "sounds/pf2.wav");
@@ -69,7 +70,7 @@ void ofApp::draw(){
     
     ofSetColor(255, 255, 255);
     app.drawMode();
-    
+
 }
 
 //--------------------------------------------------------------
@@ -244,6 +245,7 @@ void ofApp::noteTrigger(note_event_t trg){
     
 }
 
+//--------------------------------------------------------------
 void ofApp::reload(player_type_e player){
     
     app.circle[player].init(0., 1.0, FILLSPEED_FOR_RELOAD);
@@ -251,3 +253,9 @@ void ofApp::reload(player_type_e player){
 }
 
 
+//--------------------------------------------------------------
+void ofApp::bridgeToBlink(ofxOscMessage m){
+    
+    blink.sendMessage(m);
+    
+}

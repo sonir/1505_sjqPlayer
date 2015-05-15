@@ -29,6 +29,7 @@ public:
 
     void noteTrigger(note_event_t trg);
     void reload(player_type_e player);
+    void bridgeToBlink(ofxOscMessage m);
     
     //Deconstructor
     ~ofApp(){
@@ -49,6 +50,7 @@ public:
     //OSC
     Osc *osc;
     ofxOscSender sender;
+    ofxOscSender blink;
 
     
 };
