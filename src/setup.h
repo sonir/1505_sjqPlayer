@@ -40,6 +40,9 @@
 #define FILLSIZE_FOR_TRIGGER 1.3
 #define FILLSPEED_FOR_RELOAD 3
 
+//BLINKER_NODES
+#define BLINK_NUM 32
+
 
 enum player_type_e {NONE, PF, TB, GT, BA, DR};
 enum note_type_e {POINT, HIGH_NOTE, LOW_NOTE, KICK, HAT, SNARE, ALL};

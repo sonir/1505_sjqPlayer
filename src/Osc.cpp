@@ -37,6 +37,9 @@ void Osc::fireMessage(ofxOscMessage *m){
 
         ofapp->bridgeToBlink(*m);
         
+    }else if (m->getAddress() == "/sjq/blink/bang"){
+            
+            ofapp->bridgeToBlink(*m);
+            
     }
-    
 }

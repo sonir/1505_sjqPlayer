@@ -98,6 +98,8 @@ void ofApp::keyPressed(int key){
         
     }
     
+    
+    
     //SoundPlayback
         if(app.player_type==PF){
             if(key=='1')pf->play(POINT);
@@ -149,6 +151,12 @@ void ofApp::keyPressed(int key){
         m.addIntArg((int)app.player_type);
         m.addIntArg((int)HIGH_NOTE);
         sender.sendMessage(m);
+        
+        if(app.player_type==DR){
+            ofxOscMessage m2; m2.setAddress("/sjq/blink/bang");
+            m2.addIntArg(ofRandom(BLINK_NUM));
+            sender.sendMessage(m2);
+        }
         
         if(app.local==true){
             note_event_t t; t.inst=app.player_type; t.note=HIGH_NOTE;
